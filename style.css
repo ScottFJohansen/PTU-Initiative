@@ -1,0 +1,38 @@
+.main {
+    display: flex;
+    flex-direction: row; 
+    justify-content: space-evenly; 
+    margin-left: 2rem; 
+    margin-right: 2rem; 
+    margin-top: 2rem;
+    width: 100%;
+}
+
+.mainCol{
+    width: 33%;
+}
+
+.flex-col {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.input {
+    width: 100%;
+    padding: 0.25rem;
+    margin-bottom: 0.5rem;
+}
+
+.third {
+    width: 30%;
+}
+
+.between {
+    justify-content: space-between;
+}

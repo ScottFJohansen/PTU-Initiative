@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pokémon Battle Tracker</title>
+    <link rel="stylesheet" href="style.css"> <!-- If you have CSS -->
+</head>
+<body>
+    <div class="main">
+        <div id="addActorForm" class="mainCol">
+            <div class="flex-col">
+                <h2>Add Actor</h2>
+                <input type="text" id="actorName" placeholder="Name" class="input">
+                <select id="actorType" class="input">
+                    <option value="pokemon">Pokémon</option>
+                    <option value="trainer">Trainer</option>
+                </select>
+                <div class="flex-row input between">
+                    <div class="flex-col third">
+                        <label for="actorHp">HP:</label>
+                        <input type="text" id="actorHp" placeholder="" class="input">
+                    </div>
+                    <div class="flex-col third">
+                        <label for="actorDef">DEF:</label>
+                        <input type="text" id="actorDef" placeholder="" class="input">
+                    </div>
+                    <div class="flex-col third">
+                        <label for="actorAtk">ATK:</label>
+                        <input type="text" id="actorAtk" placeholder="" class="input">
+                    </div>
+                </div>
+                <div class="flex-row input">
+                    <div class="flex-col third">
+                        <label for="actorSpa">SPA:</label>
+                        <input type="text" id="actorSpa" placeholder="" class="input">
+                    </div>
+                    <div class="flex-col third">
+                        <label for="actorSpd">SPD:</label>
+                        <input type="text" id="actorSpd" placeholder="" class="input">
+                    </div>
+                    <div class="flex-col third">
+                        <label for="actorSpe">SPE:</label>
+                        <input type="text" id="actorSpe" placeholder="" class="input">
+                    </div>
+                </div>
+            </div>
+            <button onclick="addActor()" class="input">Add</button>
+        </div>
+
+        <div id="actorList" class="mainCol">
+            <h2>Actors in Initiative Order</h2>
+            <ul id="actors" class="actors"></ul>
+        </div>
+
+        <div id="actorDetails" class="mainCol">
+            <h2>Actor Details</h2>
+            <!-- Dynamic content will be loaded here -->
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
