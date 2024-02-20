@@ -7,49 +7,61 @@
 </head>
 <body>
     <div class="main">
-        <div id="addActorForm" class="mainCol">
-            <div class="flex-col">
-                <h2>Add Actor</h2>
-                <input type="text" id="actorName" placeholder="Name" class="input">
-                <select id="actorType" class="input">
-                    <option value="pokemon">Pokémon</option>
-                    <option value="trainer">Trainer</option>
-                </select>
-                <div class="flex-row input between">
-                    <div class="flex-col third">
-                        <label for="actorHp">HP:</label>
-                        <input type="text" id="actorHp" placeholder="" class="input">
+        <details>
+            <summary>Add Actor</summary>
+            <div id="addActorForm" class="mainCol">
+                <div class="flex-col">
+                    <h2 style="text-align: center;">Add Actor</h2>
+                    <div class="flex-row stat">
+                    <input type="text" id="actorName" placeholder="Name" class="input">
+                    <select id="actorType" class="input">
+                        <option value="Pokémon">Pokémon</option>
+                        <option value="Trainer">Trainer</option>
+                    </select>
                     </div>
-                    <div class="flex-col third">
-                        <label for="actorDef">DEF:</label>
-                        <input type="text" id="actorDef" placeholder="" class="input">
+                    <div class="flex-row input between w-full">
+                        <div class="flex-col third">
+                            <label for="actorHp">HP:</label>
+                            <input type="number" id="actorHp" placeholder="" class="stat">
+                        </div>
+                        <div class="flex-col third">
+                            <label for="actorDef">DEF:</label>
+                            <input type="number" id="actorDef" placeholder="" class="stat">
+                        </div>
+                        <div class="flex-col third">
+                            <label for="actorAtk">ATK:</label>
+                            <input type="number" id="actorAtk" placeholder="" class="stat">
+                        </div>
                     </div>
-                    <div class="flex-col third">
-                        <label for="actorAtk">ATK:</label>
-                        <input type="text" id="actorAtk" placeholder="" class="input">
+                    <div class="flex-row input between w-full">
+                        <div class="flex-col third">
+                            <label for="actorSpa">SPA:</label>
+                            <input type="number" id="actorSpa" placeholder="" class="stat">
+                        </div>
+                        <div class="flex-col third">
+                            <label for="actorSpd">SPD:</label>
+                            <input type="number" id="actorSpd" placeholder="" class="stat">
+                        </div>
+                        <div class="flex-col third">
+                            <label for="actorSpe">SPE:</label>
+                            <input type="number" id="actorSpe" placeholder="" class="stat">
+                        </div>
                     </div>
                 </div>
-                <div class="flex-row input">
-                    <div class="flex-col third">
-                        <label for="actorSpa">SPA:</label>
-                        <input type="text" id="actorSpa" placeholder="" class="input">
-                    </div>
-                    <div class="flex-col third">
-                        <label for="actorSpd">SPD:</label>
-                        <input type="text" id="actorSpd" placeholder="" class="input">
-                    </div>
-                    <div class="flex-col third">
-                        <label for="actorSpe">SPE:</label>
-                        <input type="text" id="actorSpe" placeholder="" class="input">
-                    </div>
-                </div>
+                <button onclick="addActor()" class="input">Add</button>
             </div>
-            <button onclick="addActor()" class="input">Add</button>
-        </div>
+        </details>
 
+        
         <div id="actorList" class="mainCol">
             <h2>Actors in Initiative Order</h2>
-            <ul id="actors" class="actors"></ul>
+            <table class="w-full actors" id="actors">
+                <tr id="head">
+                    <td class="third"><strong>Name</strong></td>
+                    <td class="third"><strong>Type</strong></td>
+                    <td class="third"><strong>Initiative</strong></td>
+                </tr>
+            </table>
         </div>
 
         <div id="actorDetails" class="mainCol">

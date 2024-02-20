@@ -1,32 +1,42 @@
 .main {
     display: flex;
-    flex-direction: row; 
+    flex-direction: column; 
     justify-content: space-evenly; 
     margin-left: 2rem; 
     margin-right: 2rem; 
     margin-top: 2rem;
     width: 100%;
+    align-items: center;
 }
 
-.mainCol{
-    width: 33%;
+.mainCol {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
 }
 
 .flex-col {
     display: flex;
     flex-direction: column;
+    row-gap: 0.5rem;
+    align-items: center;
     
 }
 
 .flex-row {
     display: flex;
     flex-direction: row;
+    column-gap: 0.5rem;
 }
 
 .input {
     width: 100%;
-    padding: 0.25rem;
-    margin-bottom: 0.5rem;
+    margin-bottom: 10px;
+}
+
+.stat {
+    width: 80%;
+    margin-bottom: 10px;
 }
 
 .third {
@@ -35,4 +45,24 @@
 
 .between {
     justify-content: space-between;
+}
+
+.w-full {
+    width: 100%;
+}
+
+.actors {
+    width: 100%;
+    text-align: center;
+    border-collapse: collapse;
+}
+
+.active {
+    background-color: blue;
+    color: white;
+}
+
+.inactive {
+    background-color: white;
+    color: black;
 }
